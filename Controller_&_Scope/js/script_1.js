@@ -7,13 +7,25 @@ function AlumnosController($scope){
 		{nombre:"Alberto Herrera", telefono:"1122334455", curso:"Segundo ESO"},
 		{nombre:"Ana Mariño", telefono:"5544332211", curso:"Tercero ESO"}
 	];
+
 	$scope.Save=function(){
 		$scope.listaAlumnosScript.push({
 			nombre:$scope.nuevoAlumno.nombre, 
 			telefono:$scope.nuevoAlumno.telefono, 
 			curso:$scope.nuevoAlumno.curso
 		})	
+			/*Formulario se oculta-----*/
+			$scope.formVisibility=false;
+			console.log($scope.formVisibility)
+			/*-------------------------*/
 	}
+	/*Estructura para hacer que el formulario "Añadir contacto se muestre"*/
+	$scope.formVisibility=false;
 
-
+		$scope.ShowForm=function(){
+			/*Formulario se muestra*/
+			$scope.formVisibility=true;
+			console.log($scope.formVisibility)
+		}
+	/*--------------------------------------------------------------------*/	
 }

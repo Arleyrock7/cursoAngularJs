@@ -30,9 +30,14 @@
 									<hr>
 								</div>
 						
+								<br>
+				<!-- Usamos ng-click="ShowForm()" Y ng-show="formVisibility" para mostrar y ocultar el formulario de registro de alumnos dando click al boton -->
+								<center><button ng-click="ShowForm()" ng-hide="formVisibility">Añadir contactos</button></center>
+
 								<!--AGREGAR ALUMNOS*******************************************-->						
 									<hr>
 									<h1>Añadir un contacto</h1>
+							<div ng-show="formVisibility" class="wrapper">
 									Nombre:<br> 
 										<input type="text" ng-model="nuevoAlumno.nombre"></input><br>	
 									Telefono:<br> 
@@ -41,6 +46,7 @@
 										<input type="text" ng-model="nuevoAlumno.curso"></input><br>
 									<hr>
 										<button ng-click="Save()">Guardar</button>
+							</div>
 								<!--END AGREGAR ALUMNOS*******************************************-->		
 						</div>
 						</div>
